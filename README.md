@@ -16,23 +16,23 @@ streamlit run Home.py
 ```
 
 ## Setup config.yaml
-* root_folder : The root folder where all the data will be stored
-* segment_length : The length of the video segments to be generated for passing to Gemini (420 seconds / 7 minutes segments work pretty well)
-* overlap : The overlap between the segments (in seconds)
-* min_duration : The minimum duration of the video to be considered for spatial processing 
-* max_duration : The maximum duration of the video to be considered for spatial processing
-* workers_gemini : The number of workers to be used for the gemini processing (recommended 10-15)
-* workers_saliency : The number of workers to be used for the saliency processing (10 workers require around 4GB vRAM, set according to GPU capacity)
+* **root_folder** : The root folder where all the data will be stored
+* **segment_length** : The length of the video segments to be generated for passing to Gemini (420 seconds / 7 minutes segments work pretty well)
+* **overlap** : The overlap between the segments (in seconds)
+* **min_duration** : The minimum duration of the video to be considered for spatial processing 
+* **max_duration** : The maximum duration of the video to be considered for spatial processing
+* **workers_gemini** : The number of workers to be used for the gemini processing (recommended 10-15)
+* **workers_saliency** : The number of workers to be used for the saliency processing (10 workers require around 4GB vRAM, set according to GPU capacity)
 
 No need to change other parameters in the config file
 
 ## Temporal Detection
-1. **Gemini_Inference/gemini_inference.py** : Has functions to generate segments given the videos.
-    * We first break the video into segments of 7 minutes each with an overlap of 2 minutes.
-    * We then pass these segments to the Gemini API to get the temporal detections.
-    * Then we combine the JSONs of the segments to get the final JSON for the episode.
-    * Then we use the filters in the webapp/config file to filter out the segments which are not required.
-    * Then these segments are stored as mp4 files in the raw_videos folder in the root folder for further spatial processing
+**Gemini_Inference/gemini_inference.py** : Has functions to generate segments given the videos.
+* We first break the video into segments of 7 minutes each with an overlap of 2 minutes.
+* We then pass these segments to the Gemini API to get the temporal detections.
+* Then we combine the JSONs of the segments to get the final JSON for the episode.
+* Then we use the filters in the webapp/config file to filter out the segments which are not required.
+* Then these segments are stored as mp4 files in the raw_videos folder in the root folder for further spatial processing
 
 ## Spatial Detection
 
