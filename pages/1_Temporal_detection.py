@@ -8,10 +8,6 @@ from Gemini_Inference.graph_patches import *
 import json
 from pprint import pprint
 
-# Open config_temp.yaml
-with open("config_temp.yaml", "r") as file:
-    config = yaml.safe_load(file)
-
 
 def main():
     st.title("Temporal Segment Detection")
@@ -23,6 +19,8 @@ def main():
     episode_id = st.session_state.get("episode_id", None)
     
     if episode_id:
+        with open("config_temp.yaml", "r") as file:
+            config = yaml.safe_load(file)
         episode_folder = f"{config['root_folder']}/{episode_id}"
         video_path = f"{episode_folder}/{episode_id}.mp4"
 
