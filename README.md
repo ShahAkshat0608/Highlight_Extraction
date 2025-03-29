@@ -23,6 +23,7 @@ streamlit run Home.py
 * **max_duration** : The maximum duration of the video to be considered for spatial processing
 * **workers_gemini** : The number of workers to be used for the gemini processing (recommended 10-15)
 * **workers_saliency** : The number of workers to be used for the saliency processing (10 workers require around 4GB vRAM, set according to GPU capacity)
+* **Kapil_Sharma_prompt_file**, **Singing_Superstars_prompt_file**, **Indian_Idol_prompt_file** : The prompt files for the respective shows, please update the path to the prompt file according to where you clone the code.
 
 No need to change other parameters in the config file
 
