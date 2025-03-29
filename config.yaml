@@ -1,0 +1,29 @@
+root_folder : /workspace/hardik/Final/outputs
+
+
+# temporal
+Kapil_Sharma_prompt_file : /home/hardik/Final/Gemini_Inference/prompts_outputs/kapil_sharma_prompt1.txt
+Singing_Superstars_prompt_file : /home/hardik/Final/Gemini_Inference/prompts_outputs/singing_superstars_prompt.txt
+Indian_Idol_prompt_file : /home/hardik/Final/Gemini_Inference/prompts_outputs/indian_idol_prompt.txt
+
+segment_length : 420
+overlap : 120
+
+gemini_model : gemini-1.5-pro
+gemini_temperature : 0
+num_shorts : 9999999
+
+# temporal constraint
+min_duration : 20
+max_duration : 40
+minimum_laughter_intensity : 5
+
+# spatial
+vinet_model_path : /home/hardik/Final/ViNet_Saliency/saved_models/ViNet_DHF1K.pt # or vinet_rootgrouped_32_new.pt
+detection_threshold : 0.6
+iou_threshold : 0.1
+
+
+# parallelization
+workers_gemini : 15
+workers_ViNet : 20

@@ -1,0 +1,86 @@
+#### **🎤 Task Overview**  
+Analyze the given video from *Indian Idol* and extract the **most interesting, emotional, and funny moments**. Focus on **judges' reactions, contestant performances, humorous interactions, and special highlights** to ensure engaging short clips.
+
+---
+
+## **1️⃣ Identify & Categorize the Best Moments**  
+Each selected clip should belong to **one of these categories** while ensuring they are between **20 to 60 seconds** long:
+
+### 🎙️ **Judges Special**
+🔹 **Emotional Praise & Reactions** – When judges get overwhelmed by a performance, leading to standing ovations, teary eyes, or heartfelt comments.  
+🔹 **Judges' Banter** – Lighthearted and funny moments among judges, teasing, and playful disagreements.  
+🔹 **Guest Interaction** – Special moments when celebrity guests react to performances, share personal stories, or join in singing.  
+
+### 🎼 **Contestant Special**
+🔹 **Best Comments on Performance** – Who got the most enthusiastic praise, golden mic, or memorable feedback?  
+🔹 **Competitive Edge** – Duels, eliminations, or moments where a contestant impresses the judges beyond expectations.  
+🔹 **Unbelievable Talent** – Unexpectedly powerful or unique singing performances that surprise the judges and audience.  
+
+### 🎭 **Funny Moments**
+🔹 **Lighthearted Contestant-Judge Interactions** – When a contestant makes a funny remark or engages in a humorous back-and-forth.  
+🔹 **Judges' Funny Reactions** – Over-the-top reactions, exaggerated expressions, or dramatic responses to performances.  
+🔹 **Unexpected Incidents** – Any funny bloopers, impromptu dance moves, or situations where someone forgets lyrics, but it turns into a hilarious moment.  
+
+---
+
+## **2️⃣ How to Select the Best Moments?**  
+Choose segments based on these key criteria:
+
+✅ **Audience & Judges' Reactions** – Clapping, standing ovations, emotional expressions, or uncontrollable laughter.  
+✅ **Performance Impact** – If a contestant receives high praise, a golden buzzer, or an unexpected reaction from judges.  
+✅ **Engagement Factor** – Moments that are shareable, meme-worthy, or highly engaging for viewers.  
+✅ **Self-Contained** – Clips should be **independent**, meaning they start where the buildup begins and end after the climax or audience reaction.  
+
+⚠️ **Avoid minor applause or forgettable moments. Focus on the BIGGEST highlights!**  
+
+---
+
+## **3️⃣ Editing Guidelines**  
+🔸 **Ensure smooth transitions** – The clip should not start or end abruptly; it should include necessary context.  
+🔸 **Keep jokes & performances intact** – If a moment builds up, retain both setup and payoff.  
+🔸 **No unnecessary trimming** – Make sure laughter, reactions, or judge comments are not cut off abruptly.  
+
+
+*REALLY IMPORTANT - While writing the description of the shorts, please make sure that if you are mentioning something important then use a backqoute (``) and not double or single qoutes ('' "") for any type of thing like movie names, actors etc.
+
+---
+
+## **4️⃣ Output Format**
+Each output should be formatted as follows:
+
+```json
+[
+    {
+        "timestamp": "01:10-01:45",
+        "category": "Judges' Banter",
+        "musical_intensity": 0,
+        "emotional_intensity": 5,
+        "laughter_intensity": 3,
+        "description": "Judge `Vishal Dadlani` playfully teases `Neha Kakkar` about getting emotional over every performance, making the audience burst into laughter."
+    },
+    {
+        "timestamp": "02:30-03:05",
+        "category": "Contestant Special",
+        "musical_intensity": 5,
+        "emotional_intensity": 3,
+        "laughter_intensity": 0,
+        "description": "Contestant stuns everyone with a unique take on `A.R. Rahman`’s song, leaving `Himesh Reshammiya` in awe as he shouts `Super hit!`"
+    },
+    {
+        "timestamp": "04:50-05:30",
+        "category": "Funny Moments",
+        "musical_intensity": 2,
+        "emotional_intensity": 4,
+        "laughter_intensity": 4
+        "description": "A contestant forgets the lyrics mid-performance and makes up hilarious words on the spot, making the judges and audience crack up."
+    },
+    {
+        "timestamp": "07:15-07:55",
+        "category": "Guest Interaction",
+        "musical_intensity": 0,
+        "emotional_intensity": 3,
+        "laughter_intensity": 4,
+        "description": "Celebrity guest `Govinda` joins the stage and sings along with a contestant, creating a magical yet funny impromptu moment."
+    }
+]
+```

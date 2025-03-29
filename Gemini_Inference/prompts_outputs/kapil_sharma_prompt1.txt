@@ -1,0 +1,69 @@
+#### **🎭 Task Overview**  
+Analyze the given video from *The Kapil Sharma Show* and extract the **funniest moments**. Focus on audience laughter, comedic timing, and guest reactions to ensure high-quality highlights.
+
+---
+
+## **1️⃣ Identify & Categorize the Funniest Moments**  
+Each selected clip should belong to **one of these categories** while making sure they are between 20 to 60 seconds long:
+
+🔹 **Witty Banter & Wordplay** – Punchlines, puns, clever wordplay between Kapil and guests.
+🔹 **Situational Comedy** – Funny skits, character-driven humor, staged comedic interactions.
+🔹 **Roasting & Playful Teasing** – Kapil humorously poking fun at guests (career, lifestyle, etc.).
+🔹 **Physical Comedy** – Mimicry, exaggerated gestures, funny body language.
+
+---
+
+## **2️⃣ How to Select the Funniest Moments?**  
+Select segments based on these criteria:  
+
+✅ **Laughter Intensity** – Loud audience reactions, continuous laughter, standing ovations.  
+✅ **Celebrity Reactions** – Guest laughter, facial expressions, covering their face, clapping.  
+✅ **Build-Up & Payoff / Anecdotal** – Jokes that develop over time and lead to a big punchline.  
+✅ **Cultural & Viral Relevance** – Jokes related to trending topics, movie promotions, or social media moments.  
+
+⚠️ **Avoid minor chuckles or inside jokes that don’t land well. Focus on the BIGGEST laughs!**   '
+
+
+IMPORTANT NOTES
+* FOCUS ON QUALITY NOT QUANTITY, that is make sure that the output actually captures the most funny moments of the video.
+* MAKE SURE THAT THE STARTING AND ENDING OF THE OUTPUT CLIP are not abrupt. The start of the video should be totally independent of the previous moments and should start when the joke or the buildup starts and the end should be after showing the reaction and laughter of the audience and the guests.
+* All the segments should be self-contained. That is the viewer should not need any previous context to understand that clip.
+* ⏳ **If a joke builds over time, keep the entire setup & punchline together while keeping the ending of the clip as the loudest laughter in that segment** instead of trimming too much.
+* Ensure that you choose the segments whose length is between 20 to 60 seconds so as to capture the broader arc and the joke rather than just punchline or short chuckles.
+
+*REALLY IMPORTANT - While writing the description of the shorts, please make sure that if you are mentioning something important then use a backqoute (``) and not double or single qoutes ('' "") for any type of thing like movie names, actors etc.
+
+
+---
+
+## **5️⃣ Output Format**
+Each output should be formatted as follows:
+
+```json
+[
+    {
+        "timestamp": "00:45-01:15",
+        "category": "Witty Banter",
+        "laughter_intensity": 5,
+        "description": "Kapil delivers a sharp one-liner about the guest’s movie, making both the audience and celebrity burst into uncontrollable laughter."
+    },
+    {
+        "timestamp": "02:10-02:50",
+        "category": "Roasting",
+        "laughter_intensity": 4,of the laughter at the end of the punchline included
+        "description": "Kapil teases guest about their `cool marriage`, leading to exaggerated reactions and a witty comeback."
+    },
+    {
+        "timestamp": "04:00-04:45",
+        "category": "Physical Comedy",
+        "laughter_intensity": 5,
+        "description": "Kapil mimics the guest’s signature dance move in an exaggerated way, making the audience go wild."
+    },
+    {
+        "timestamp": "06:20-07:00",
+        "category": "Musical Comedy",
+        "laughter_intensity": 3,
+        "description": "Kapil and the celebrity improvise a funny musical parody, blending humor with spontaneous singing."
+    }
+]
+```
