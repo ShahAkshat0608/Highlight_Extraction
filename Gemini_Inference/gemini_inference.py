@@ -10,7 +10,7 @@ import subprocess
 import yaml
 import json
 import ast
-from moviepy.editor import VideoFileClip
+from moviepy import VideoFileClip
 
 def setup_gemini():
     load_dotenv()
@@ -211,20 +211,36 @@ def get_final_temporal_clips(config, filtered_timestamps, video_path):
         # Convert start_time (HH:MM:SS) to seconds
         h, m, s = map(float, start_time.split(':'))
         start_seconds = h * 3600 + m * 60 + s
-        
         # Load the video file
         try:
             with VideoFileClip(input_video) as video:
+                # check if video is valid
+                if video is None:
+                    raise ValueError("Video file is not valid or could not be opened.")
+                if video.duration <= 0:
+                    raise ValueError("Video duration is zero or negative.")
+
                 # Extract the subclip
-                subclip = video.subclip(start_seconds, start_seconds + float(duration))
+                subclip = video.subclipped(start_seconds, start_seconds + float(duration))
+                # check if subclip is valid
+                if subclip is None:
+                    raise ValueError("Subclip could not be created.")
+                # check if subclip duration is valid
+                if subclip.duration <= 0:
+                    raise ValueError("Subclip duration is zero or negative.")
                 # Write to output file
-                subclip.write_videofile(
-                    output_file,
-                    codec='libx264',
-                    audio_codec='aac',
-                    temp_audiofile='temp-audio.m4a',
-                    remove_temp=True
-                )
+                try:
+                    
+                    subclip.write_videofile(
+                        output_file,
+                        codec='libx264',
+                        audio_codec='aac',
+                        temp_audiofile='temp-audio.m4a',
+                        remove_temp=True,
+                    )
+                except Exception as e:
+                    print(f"Error writing video file {output_file}: {e}")
+                    
             print(f"Extracted: {output_file}")
         except Exception as e:
             print(f"Error extracting {output_file}: {e}")
