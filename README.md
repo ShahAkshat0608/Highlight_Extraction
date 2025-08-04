@@ -73,6 +73,6 @@ No need to change other parameters in the config file
 
 ### Issues
 In case of any problems/updates/suggestions please feel free to contact any of the contributors for the project.
+* Akshat Shah (akshat.shah@research.iiit.ac.in)
 * Hardik Mittal (hardik.mittal@research.iiit.ac.in)
 * Sarthak Bansal (sarthak.bansal@students.iiit.ac.in)
-* Akshat Shah (akshat.shah@research.iiit.ac.in)
